@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property: one
+  earring: MyString
+  name: MyString
+  lot: one
+  birth: 2017-12-13
+  breed: 1
+  blood: 1
+  sex: 1
+  source: 1
+  price: 1
+  active: false
+
+two:
+  property: two
+  earring: MyString
+  name: MyString
+  lot: two
+  birth: 2017-12-13
+  breed: 1
+  blood: 1
+  sex: 1
+  source: 1
+  price: 1
+  active: false

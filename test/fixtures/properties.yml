@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  proprietary: MyString
+  size: 1
+  phone: MyString
+  state: MyString
+  city: MyString
+  comunity: MyString
+  complement: MyString
+  active: false
+
+two:
+  name: MyString
+  proprietary: MyString
+  size: 1
+  phone: MyString
+  state: MyString
+  city: MyString
+  comunity: MyString
+  complement: MyString
+  active: false

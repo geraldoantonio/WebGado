@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal: one
+  medicament: one
+  applied: 2017-12-13
+  disease: 1
+
+two:
+  animal: two
+  medicament: two
+  applied: 2017-12-13
+  disease: 1

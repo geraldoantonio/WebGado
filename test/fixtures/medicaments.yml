@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  carencyday: 1
+  measure: 1
+  usemode: MyText
+
+two:
+  description: MyString
+  carencyday: 1
+  measure: 1
+  usemode: MyText

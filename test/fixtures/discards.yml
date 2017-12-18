@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal: one
+  cause: one
+  date: 2017-12-17
+  price: 1
+
+two:
+  animal: two
+  cause: two
+  date: 2017-12-17
+  price: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal: one
+  weight: 1.5
+  height: 1.5
+  checked: 2017-12-13
+
+two:
+  animal: two
+  weight: 1.5
+  height: 1.5
+  checked: 2017-12-13
