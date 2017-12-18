@@ -43,11 +43,10 @@ gem 'activeadmin'
 #Addons ActiveAdmin
 gem 'activeadmin_addons'
 #Theme 
-#gem 'arctic_admin'
-#gem 'active_admin_flat_skin'
 gem "active_material", github: "vigetlabs/active_material"
 
-
+#Export XLS file
+gem 'activeadmin-xls', '~>1.0.0'
 
 # Plus integrations with:
 gem 'devise'

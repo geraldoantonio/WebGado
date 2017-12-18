@@ -265,7 +265,7 @@ pt-BR:
         state: "Estado" 
         comunity: "Comunidade"
         complement: "Complemento"
-        actived: "Ativa"
+        active: "Ativa"
         created_at: "Criado em"
         updated_at: "Atualizado em"
       medicament:
