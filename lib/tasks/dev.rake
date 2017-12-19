@@ -1,5 +1,28 @@
 namespace :dev do
 
+  desc "Setup Development"
+  task setup: :environment do
+
+
+    puts ">>>> Executando o setup para desenvolvimento <<<<"
+
+      puts "Apagando Banco de Dados... #{%x(rake db:drop)}"
+      puts "Criando Banco de Dados...  #{%x(rake db:create)}"
+      puts %x(rake db:migrate)
+      puts %x(rake db:seed)
+      puts %x(rake dev:generate_property)
+      puts %x(rake dev:generate_animals)
+      puts %x(rake dev:generate_causes)
+      puts %x(rake dev:generate_weighings)
+
+    puts ">>>>       Setup concluido com sucesso!    <<<<<"
+    
+
+  end
+  
+
+##############################################################################
+ 
 
 ##############################################################################
 
