@@ -22,6 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  database: web-gado_production
-  username: web-gado
+  database: webgado_production
+  username: webgado
   password: <%= ENV['WEB-GADO_DATABASE_PASSWORD'] %>
