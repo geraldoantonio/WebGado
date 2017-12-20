@@ -22,8 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  encoding: utf8
-  database: webgado
-  pool: 5
-  username: root
-  password: 870216
+  database: web-gado_production
+  username: web-gado
+  password: <%= ENV['WEB-GADO_DATABASE_PASSWORD'] %>
