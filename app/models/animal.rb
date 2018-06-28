@@ -3,6 +3,7 @@ class Animal < ApplicationRecord
   belongs_to :lot
   has_many :weighings
   has_many :medications
+  has_many :feeds
 
 
   enum breed: [

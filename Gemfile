@@ -5,12 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby "2.5.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.6'
+gem 'rails', '~> 5.2.0.rc2'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -47,7 +47,7 @@ gem 'activeadmin_addons'
 gem "active_material", github: "vigetlabs/active_material"
 
 #Export XLS file
-gem 'activeadmin-xls', '~>1.0.0'
+#gem 'activeadmin-xls', '~>1.0.0'
 
 # Plus integrations with:
 gem 'devise'
@@ -67,7 +67,10 @@ gem 'groupdate'
 gem 'rake-progressbar'
 
 
-
+group :production do
+  #Postgres database
+  gem 'pg', '~> 0.18.4'
+end
 
 
 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  animal: one
+  food: one
+  lot: one
+  firstDate: 2018-06-28
+  finaleDate: 2018-06-28
+
+two:
+  animal: two
+  food: two
+  lot: two
+  firstDate: 2018-06-28
+  finaleDate: 2018-06-28

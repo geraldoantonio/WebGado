@@ -4,7 +4,7 @@ ActiveAdmin.register Animal do
 #
 permit_params :earring, :name, :breed, :property_id, :lot_id, :birth, :sex, :source, :active, :blood, :price
 
-  menu parent: 'Cadastro', :label => "Animal"
+  menu parent: 'Cadastro',priority: 1, :label => "Animal"
 
   index do
     selectable_column
@@ -65,6 +65,16 @@ permit_params :earring, :name, :breed, :property_id, :lot_id, :birth, :sex, :sou
       end
     end
 
+    panel "Histórico de Alimentação do Animal" do
+      table_for animal.feeds.order(firstDate: :DESC) do
+        column :lot
+        column :food
+        column() { |feed| feed.food.description }
+        column :firstDate
+        column :finaleDate
+      end
+    end
+    
     active_admin_comments
     
   end

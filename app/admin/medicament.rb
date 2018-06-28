@@ -5,7 +5,7 @@ ActiveAdmin.register Medicament do
   permit_params :description, :carencyday, :usemode, :measure 
 #
 
-  menu parent: 'Cadastro', :label => "Medicamento"
+  menu parent: 'Sanitário', :label => "Medicamento"
     
   index do
     selectable_column

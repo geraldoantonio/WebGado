@@ -1,6 +1,7 @@
 pt-BR:
   active_admin:
-    dashboard: "Painel Administrativo"
+    home: "Página Inicial"
+    dashboard: "Gráficos"
     dashboard_welcome:
       welcome: "Bem vindo ao Active Admin. Esta é a página de painéis padrão."
       call_to_action: "Para adicionar seções ao painel, verifique 'app/admin/dashboard.rb'"
@@ -83,13 +84,13 @@ pt-BR:
       author_type: "Tipo de Autor"
       body: "Conteúdo"
       author: "Autor"
-      add: "Adicionar Comentário"
-      delete: "Deletar comentário"
-      delete_confirmation: "Tem certeza que deseja excluir este comentário?"
+      add: "Adicionar Observação"
+      delete: "Deletar Observação"
+      delete_confirmation: "Tem certeza que deseja excluir este Observação?"
       resource: "Objeto"
-      no_comments_yet: "Nenhum comentário."
+      no_comments_yet: "Nenhum Observação."
       author_missing: "Anônimo"
-      title_content: "Comentários: %{count}"
+      title_content: "Observações: %{count}"
       errors:
         empty_text: "O comentário não foi salvo porque o texto estava vazio."
 
@@ -230,8 +231,8 @@ pt-BR:
         one: "Pesagem Animal" 
         other: "Pesagens Animais"
       comment:
-        one: "Comentário"
-        other: "Comentários"
+        one: "Observação"
+        other: "Observações"
       lot:
         one: "Lote de Animal"
         other: "Lote de Animais"
@@ -241,6 +242,12 @@ pt-BR:
       discard:
         one: "Descarte Animal"
         other: "Descarte Animais"
+      food:
+        one: "Alimento"
+        other: "Alimentos"
+      feed:
+        one: "Alimentação"
+        other: "Alimentações"
     attributes:
       animal:        
         earring: "Brinco"
@@ -298,7 +305,7 @@ pt-BR:
         updated_at: "Atualizado em"
       weighing:
         animal: "Animal"
-        weight: "Peso(KG)"
+        weight: "Peso(@)"
         height: "Altura(MT)"
         checked: "Data pesagem"
         created_at: "Criado em"
@@ -315,6 +322,19 @@ pt-BR:
       cause:
         name: "Causa"
         motive: "Motivo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      food:
+        name: "Alimento"
+        description: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      feed:
+        animal: "Animal"
+        lot: "Lote"
+        food: "Alimento"
+        firstDate: "Início da Alimentação"
+        finaleDate: "Fim da Alimentação"
         created_at: "Criado em"
         updated_at: "Atualizado em"
 

@@ -11,11 +11,18 @@ namespace :dev do
       puts %x(rake db:migrate)
       puts %x(rake db:seed)
       puts %x(rake dev:generate_property)
+      puts %x(rake dev:generate_lots)
       puts %x(rake dev:generate_animals)
       puts %x(rake dev:generate_causes)
       puts %x(rake dev:generate_weighings)
-
+      puts %x(rake dev:generate_medicaments)
+      puts %x(rake dev:generate_medications)
+      puts %x(rake dev:generate_foods)
+      puts %x(rake dev:generate_feeds)
+    %x(clear)
     puts ">>>>       Setup concluido com sucesso!    <<<<<"
+    puts "Iniciando Aplicação... "
+      %x(rails s)
     
 
   end
@@ -41,8 +48,7 @@ namespace :dev do
                    size: 325 ,
                    phone: "(99)98877-6655",
                    comunity: Faker::Address.community,
-                   complement: "" ,
-
+                   complement: "" 
       )
 
       farm.save!
@@ -51,6 +57,26 @@ namespace :dev do
   end
 ##############################################################################
 
+desc "Generate Faker Lots"
+task generate_lots: :environment do
+  puts "Generate Faker Lots..."
+  bar = RakeProgressbar.new(5)
+  5.times do
+    bar.inc
+   
+    lot = Lot.new(
+                name: "Lote " << (1..100).to_a.sample,
+                description: "Description...",
+                phase: (1..7).to_a.sample
+
+    )
+
+    lot.save!
+  end
+  bar.finished
+end
+
+##############################################################################
   desc "Generate Faker Animals"
   task generate_animals: :environment do
     puts "Generate Faker Animal..."
@@ -80,6 +106,33 @@ namespace :dev do
     end
     bar.finished
   end
+
+##############################################################################
+
+desc "Generate Faker Medicament"
+task generate_medicaments: :environment do
+  puts "Generate Faker Medicaments..."
+
+  medicament_list = [ "Lactotropin", "Topline Prata", "Pencivet", "Borgal" ]
+
+  usemode_list = ["Subcutânea", "Tópico", "25 ml intramuscular "]
+
+
+  bar = RakeProgressbar.new(medicament_list.length)
+
+  medicament_list.each do |m|
+    bar.inc
+      medicament = Medicament.new(
+                  
+                  description: m,
+                  usemode:  usemode_list.sample,
+                  carencyday: (0..30).to_a.sample
+      )
+
+      medicament.save!
+    end
+  bar.finished
+end
 
 ##############################################################################
 
@@ -172,5 +225,56 @@ namespace :dev do
 
     bar.finished
   end
+#################################################################
 
+desc "Generate Faker Food"
+task generate_foods: :environment do
+  puts "Generate Faker Foods..."
+
+  food_list = [ "Tipo A", "Tipo B", "Tipo C", "Tipo D" ]
+
+  description_list = ["Pasto | Palma | Ração ", "Pasto | Farelo Milho", "Ração | Vitamina D "]
+
+
+  bar = RakeProgressbar.new(food_list.length)
+
+  food_list.each do |f|
+    bar.inc
+      food = Food.new(
+                  
+                  description: description_list.sample,
+                  name:  f
+      )
+
+      food.save!
+    end
+  bar.finished
+end
+########################################################
+
+  desc "Generate Faker Feed"
+  task generate_feeds: :environment do
+    puts "Generate Faker Feeds..."
+    bar = RakeProgressbar.new(Animal.all.count)
+    Animal.all.each do |animal|
+      bar.inc
+
+      5.times do
+        feed = Feed.new(
+                    
+                    animal: animal, 
+                    food: Food.all.sample,
+                    lot: animal.lot,
+                    firstDate: Faker::Date.between(animal.birth, Date.today), 
+                    finaleDate: Faker::Date.between(animal.birth, Date.today+60)
+
+        )
+
+        feed.save!
+      end
+    end
+    bar.finished
+  end
+
+########################################################
 end

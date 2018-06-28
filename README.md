@@ -1,24 +1,27 @@
-# README
+# WebGado
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sistema gerenciador de animais de corte.
 
-Things you may want to cover:
+## Algumas Funcionalidades:
 
-* Ruby version
+* Múltiplos Usuários
 
-* System dependencies
+* Gerenciamento de:
+    * Fazendas
+    * Lotes de Animais
+    * Peso e Tamanho
+    * Vacinação
+    * Medicamentos
 
-* Configuration
+* Dashboard (Gráficos da Situação Atual)
 
-* Database creation
+* Filtros de Pesquisas
 
-* Database initialization
+## Autores
 
-* How to run the test suite
+* Geraldo Júnior
+    * mail: junior.bimbo@gmail.com
+* Larissa Kelly
+    * mail: larikelli@hotmail.com
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
