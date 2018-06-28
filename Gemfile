@@ -65,6 +65,9 @@ gem 'groupdate'
 gem 'rake-progressbar'
 
 
+#Faker
+gem 'faker'
+
 group :production do
   #Postgres database
   gem 'pg', '~> 0.18.4'
@@ -78,8 +81,6 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
-  #Faker
-  gem 'faker'
 
 end
 
